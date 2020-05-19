@@ -8,6 +8,10 @@ import java.util.List;
 
 public class StudentServiceImpl extends StorageService<Student> implements StudentService {
 
+    public StudentServiceImpl() {
+        super(true); // send mock as true for testing purpose
+    }
+
     @Override
     public List<Student> getAll() {
         return getAllForEntity(Student.ENTITY_TYPE);

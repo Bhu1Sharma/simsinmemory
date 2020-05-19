@@ -68,12 +68,8 @@ public class AppModule
 	 */
 	@Contribute(SymbolProvider.class)
 	@ApplicationDefaults
-	public static void setupEnvironment(MappedConfiguration<String, Object> configuration)
-	{
-        // Support for jQuery is new in Tapestry 5.4 and will become the only supported
-        // option in 5.5.
+	public static void setupEnvironment(MappedConfiguration<String, Object> configuration) {
 		configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
-		configuration.add(SymbolConstants.BOOTSTRAP_ROOT, "context:mybootstrap");
 	}
 
 

@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+    <!-- Header -->
+    <div class="card-panel indigo accent-1">
+        <b><h5>${applicationTitle}</h5></b>
+    </div>
     <body>
         <t:body/>
     </body>
+    <!-- Footer -->
+    <!-- NO FOOTER at this time -->
 </html>

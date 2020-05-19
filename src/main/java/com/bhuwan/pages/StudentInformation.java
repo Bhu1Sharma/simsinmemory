@@ -5,9 +5,7 @@ import com.bhuwan.services.StudentService;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-import java.util.List;
-
-public class Index {
+public class StudentInformation {
 
     @Inject
     private StudentService studentService;
@@ -15,8 +13,17 @@ public class Index {
     @Property
     private Student student;
 
-    public List<Student> getStudents() {
-        return studentService.getAll();
+    private Long studentId;
+
+    public void onActivate(Long studentId) {
+        if (student == null) {
+            student = studentService.getById(studentId);
+        }
+        this.studentId = studentId;
+    }
+
+    public Long onPassivate() {
+        return studentId;
     }
 
 }

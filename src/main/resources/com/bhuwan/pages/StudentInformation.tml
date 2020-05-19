@@ -1,7 +1,6 @@
 <html t:type="layout"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
 <div class="container">
-    <!--    <t:if test="students">-->
     <table class="responsive-table">
         <thead>
         <th>Id</th>
@@ -11,19 +10,13 @@
         <th></th>
         </thead>
         <tbody>
-        <tr t:type="Loop" t:source="students" t:value="student">
+        <tr>
             <td>${student.studentId}</td>
             <td>${student.name}</td>
             <td>${student.age}</td>
             <td>${student.standard}</td>
-            <td>
-                <a t:type="PageLink" t:page="studentInformation" t:context="student.studentId">
-                    View
-                </a>
-            </td>
         </tr>
         </tbody>
     </table>
-    <!--    </t:if>-->
 </div>
 </html>

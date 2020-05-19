@@ -1,0 +1,20 @@
+<html t:type="layout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<div>
+    <h1>${message}</h1>
+    <t:if test="students">
+        <table>
+            <thead>
+            <th>studentId</th>
+            <th>name</th>
+            </thead>
+            <tbody>
+            <tr t:type="Loop" t:source="students" t:value="student">
+                <td>${student.studentId}</td>
+                <td>${student.name}</td>
+            </tr>
+            </tbody>
+        </table>
+    </t:if>
+</div>
+</html>
